@@ -1,0 +1,93 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap'); */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(#d18513d8, #cd32dbda);
+}
+body h1{
+    margin: 20px;
+    color: rgba(145, 13, 90, 0.575);
+    text-decoration:underline;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+     margin-top: 20px;
+}
+#clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    /* background: transparent; */
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+    animation: move 4s infinite;
+    animation-timing-function: steps(infinite);
+
+    /* animation: rodar 2.5s  infinite; */
+    /* animation: 3s linear 1s infinite alternate slidein;  */
+    /* animation: 3s linear 1s infinite running slidein; */
+}
+@keyframes move {
+    0%{
+       scale:1.2;
+
+    }
+    75%{
+        scale: 1;
+    }
+}
+#clock div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(81, 117, 99, 0.404);
+    box-shadow: 8px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 10px;
+    /* letter-spacing: 3px; */
+    /* animation: mudaCor 2s alternate infinite; */
+}
+ /* @keyframes mudaCor {
+    25% {background-color: rgba(25, 105, 255, 0.404);}
+    50% {background-color: rgba(236, 25, 255, 0.404);}
+    75% {background-color: rgba(171, 25, 255, 0.404);}
+    100% {background-color: rgba(25, 29, 255, 0.404);} 
+} */
+ @keyframes rodar {
+    25% {transform: rotate(-3deg);} 
+    50% {transform: rotate(3deg);}
+    75% {transform: rotate(-3deg);}
+    100% {transform: rotate(0deg);} 
+}
+#clock span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+#clock span.time {
+    font-size: 15px;
+}
+   @media (min-heigth: 560px) { 
+     #clock  {
+        width: 200px;
+        height: 550px;
+        flex-direction: column;
+        flex-direction: inherit;
+    }   
+    #clock div {
+        height: 140px;
+    }
+}
